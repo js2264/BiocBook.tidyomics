@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>BiocBook.tidyomics</title>
+<title>BiocBook.tidyomics - 2&nbsp; Manipulating genomic interaction data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -53,24 +53,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./pages/preamble.html" rel="next">
-<link href="./assets/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../pages/manipulating-summarized-experiment-data.html" rel="next">
+<link href="../pages/manipulating-genomic-interval-data.html" rel="prev">
+<link href="../assets/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -105,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welcome</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/manipulating-genomic-interval-data.html">Fundamentals concepts</a></li><li class="breadcrumb-item"><a href="../pages/manipulating-genomic-interaction-data.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Manipulating genomic interaction data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -116,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">BiocBook.tidyomics</a> 
+      <a href="../">BiocBook.tidyomics</a> 
         <div class="sidebar-tools-main">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-git"></i></a>
@@ -145,13 +146,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/preamble.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/preamble.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preamble</span></a>
   </div>
 </li>
@@ -166,19 +167,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-genomic-interval-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-genomic-interval-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Manipulating genomic interval data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-genomic-interaction-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-genomic-interaction-data.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Manipulating genomic interaction data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-summarized-experiment-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-summarized-experiment-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Manipulating summarized experiment data</span></span></a>
   </div>
 </li>
@@ -195,31 +196,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-transcriptomic-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-transcriptomic-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Manipulating transcriptomic data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-epigenomics-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-epigenomics-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Manipulating epigenomics data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-single-cell-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-single-cell-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Manipulating single-cell data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-spatial-single-cell-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-spatial-single-cell-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Manipulating spatial single-cell data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-mass-cytometry-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-mass-cytometry-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulating mass cytometry data</span></span></a>
   </div>
 </li>
@@ -236,13 +237,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/helper-packages.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/helper-packages.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Helper packages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/future-directions.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/future-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Future directions</span></span></a>
   </div>
 </li>
@@ -256,15 +257,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#docker-image" id="toc-docker-image" class="nav-link" data-scroll-target="#docker-image">Docker image</a></li>
-  <li><a href="#rstudio-server" id="toc-rstudio-server" class="nav-link" data-scroll-target="#rstudio-server">RStudio Server</a></li>
+<li>
+<a href="#what-are-ginteractions" id="toc-what-are-ginteractions" class="nav-link active" data-scroll-target="#what-are-ginteractions"><span class="header-section-number">2.1</span> What are <code>GInteractions</code>?</a>
+  <ul class="collapse">
+<li><a href="#creating-a-ginteractions-object-from-scratch" id="toc-creating-a-ginteractions-object-from-scratch" class="nav-link" data-scroll-target="#creating-a-ginteractions-object-from-scratch"><span class="header-section-number">2.1.1</span> Creating a <code>GInteractions</code> object from scratch</a></li>
+  <li><a href="#importing-genomic-interaction-data-from-files" id="toc-importing-genomic-interaction-data-from-files" class="nav-link" data-scroll-target="#importing-genomic-interaction-data-from-files"><span class="header-section-number">2.1.2</span> Importing genomic interaction data from files</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#manipulating-ginteractions-the-tidy-way" id="toc-manipulating-ginteractions-the-tidy-way" class="nav-link" data-scroll-target="#manipulating-ginteractions-the-tidy-way"><span class="header-section-number">2.2</span> Manipulating <code>GInteractions</code> the tidy way</a>
+  <ul class="collapse">
+<li><a href="#moving-anchors-around" id="toc-moving-anchors-around" class="nav-link" data-scroll-target="#moving-anchors-around"><span class="header-section-number">2.2.1</span> Moving anchors around</a></li>
+  <li><a href="#filtering-interactions" id="toc-filtering-interactions" class="nav-link" data-scroll-target="#filtering-interactions"><span class="header-section-number">2.2.2</span> Filtering interactions</a></li>
+  <li><a href="#overlapping-anchors" id="toc-overlapping-anchors" class="nav-link" data-scroll-target="#overlapping-anchors"><span class="header-section-number">2.2.3</span> Overlapping anchors</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#real-world-use-case-computing-a-ps" id="toc-real-world-use-case-computing-a-ps" class="nav-link" data-scroll-target="#real-world-use-case-computing-a-ps"><span class="header-section-number">2.3</span> Real-world use case: computing a P(s)</a>
+  <ul class="collapse">
+<li><a href="#importing-data-from-pairs-file" id="toc-importing-data-from-pairs-file" class="nav-link" data-scroll-target="#importing-data-from-pairs-file"><span class="header-section-number">2.3.1</span> Importing data from pairs file</a></li>
+  <li><a href="#counting-interactions-by-strands" id="toc-counting-interactions-by-strands" class="nav-link" data-scroll-target="#counting-interactions-by-strands"><span class="header-section-number">2.3.2</span> Counting interactions by strands</a></li>
+  <li><a href="#plot-ps" id="toc-plot-ps" class="nav-link" data-scroll-target="#plot-ps"><span class="header-section-number">2.3.3</span> Plot P(s)</a></li>
+  </ul>
+</li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info">Session info</a></li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">BiocBook.tidyomics</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/manipulating-genomic-interval-data.html">Fundamentals concepts</a></li><li class="breadcrumb-item"><a href="../pages/manipulating-genomic-interaction-data.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Manipulating genomic interaction data</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Manipulating genomic interaction data</span>
+</h1>
 </div>
 
 
@@ -278,70 +302,164 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><p><img src="assets/cover.png" title="BiocBook.tidyomics" class="quarto-cover-image img-fluid"></p>
-<p><strong>Package:</strong> BiocBook.tidyomics<br><strong>Authors:</strong> Jacques Serizay [aut, cre]<br><strong>Compiled:</strong> 2024-07-26<br><strong>Package version:</strong> 0.98.0<br><strong>R version:</strong> <b style="color:red;">R version 4.4.1 (2024-06-14)</b><br><strong>BioC version:</strong> <b style="color:red;">3.20</b><br><strong>License:</strong> MIT + file LICENSE<br></p>
-<section id="welcome" class="level1 unnumbered"><h1 class="unnumbered">Welcome</h1>
-<p>This is the landing page of the <code>BiocBook</code> entitled <em>…</em>.</p>
-<p>This book introduces the reader to <em>…</em>.</p>
-</section><section id="docker-image" class="level1 unnumbered"><h1 class="unnumbered">Docker image</h1>
-<p>A <code>Docker</code> image built from this repository is available here:</p>
-<p>👉 <a href="https://ghcr.io/js2264/biocbook.tidyomics">ghcr.io/js2264/biocbook.tidyomics</a> 🐳</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Get started now 🎉
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can get access to all the packages used in this book in &lt; 1 minute, using this command in a terminal:</p>
+</header><section id="what-are-ginteractions" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="what-are-ginteractions">
+<span class="header-section-number">2.1</span> What are <code>GInteractions</code>?</h2>
+<p><em>Recommended time: 15 min</em></p>
+<section id="creating-a-ginteractions-object-from-scratch" class="level3" data-number="2.1.1"><h3 data-number="2.1.1" class="anchored" data-anchor-id="creating-a-ginteractions-object-from-scratch">
+<span class="header-section-number">2.1.1</span> Creating a <code>GInteractions</code> object from scratch</h3>
+<p><code>GInteractions</code> class of object combines pairs of interacting <code>GRanges</code> together. It is defined by the <code>InteractionSet</code> package.</p>
+<p>Each side of the pair is referred to as “anchors” (e.g.&nbsp;<code>anchors1</code> and <code>anchors2</code> refer to left-hand and right-hand side of the genomic interaction).</p>
 <div class="cell" data-layout-align="center">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>bash</strong></pre>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">InteractionSet</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gr1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/GenomicRanges/man/GRanges-class.html">GRanges</a></span><span class="op">(</span><span class="st">"I:10-50"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gr2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/GenomicRanges/man/GRanges-class.html">GRanges</a></span><span class="op">(</span><span class="st">"I:100-110"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/InteractionSet/man/GInteractions-class.html">GInteractions</a></span><span class="op">(</span>anchor1 <span class="op">=</span> <span class="va">gr1</span>, anchor2 <span class="op">=</span> <span class="va">gr2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-it</span> ghcr.io/js2264/biocbook.tidyomics:devel R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-</section><section id="rstudio-server" class="level1 unnumbered"><h1 class="unnumbered">RStudio Server</h1>
-<p>An RStudio Server instance can be initiated from the <code>Docker</code> image as follows:</p>
+<p>A <code>GInteractions</code> object can also be generated by specific a set of <code>regions</code> (as a <code>GRanges</code> object with multiple entries) and a set of numerical indices linking the different regions by pairs.</p>
 <div class="cell" data-layout-align="center">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>bash</strong></pre>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/InteractionSet/man/GInteractions-class.html">GInteractions</a></span><span class="op">(</span>anchor1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, anchor2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span>, regions <span class="op">=</span> <span class="va">gr</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="dt">\</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--volume</span> <span class="op">&lt;</span>local_folder<span class="op">&gt;</span>:<span class="op">&lt;</span>destination_folder<span class="op">&gt;</span> <span class="dt">\</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">-e</span> PASSWORD=OHCA <span class="dt">\</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">-p</span> 8787:8787 <span class="dt">\</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    ghcr.io/js2264/biocbook.tidyomics:devel</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="importing-genomic-interaction-data-from-files" class="level3" data-number="2.1.2"><h3 data-number="2.1.2" class="anchored" data-anchor-id="importing-genomic-interaction-data-from-files">
+<span class="header-section-number">2.1.2</span> Importing genomic interaction data from files</h3>
+<p>A <code>GInteractions</code> object is typically imported in R from a file storing genomic interactions, e.g.&nbsp;a <code>bedpe</code> file or a <code>pairs</code> file, using the <code>as_ginteractions()</code> coercing function from the <code>plyinteractions</code> package.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">bedpef</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">'extdata'</span>, <span class="st">'S288C-loops.bedpe'</span>, package <span class="op">=</span> <span class="st">'Bioc2024tidyWorkshop'</span>, mustWork <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">tib</span> <span class="op">&lt;-</span> <span class="fu">read_tsv</span><span class="op">(</span><span class="va">bedpef</span>, col_names <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="va">tib</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">plyinteractions</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gi</span> <span class="op">&lt;-</span> <span class="va">tib</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">as_ginteractions</span><span class="op">(</span></span>
+<span>        seqnames1 <span class="op">=</span> <span class="va">X1</span>, start1 <span class="op">=</span> <span class="va">X2</span>, end1 <span class="op">=</span> <span class="va">X3</span>, </span>
+<span>        seqnames2 <span class="op">=</span> <span class="va">X4</span>, start2 <span class="op">=</span> <span class="va">X5</span>, end2 <span class="op">=</span> <span class="va">X6</span></span>
+<span>    <span class="op">)</span></span>
+<span></span>
+<span><span class="va">gi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section></section><section id="manipulating-ginteractions-the-tidy-way" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="manipulating-ginteractions-the-tidy-way">
+<span class="header-section-number">2.2</span> Manipulating <code>GInteractions</code> the tidy way</h2>
+<p><em>Recommended time: 15 min</em></p>
+<section id="moving-anchors-around" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="moving-anchors-around">
+<span class="header-section-number">2.2.1</span> Moving anchors around</h3>
+<p>Just like <code>GRanges</code>, one can mutate columns, including “protected” columns, including <code>seqnames{12}</code>, <code>start{12}</code>, <code>end{12}</code>, <code>strand{12}</code> and <code>width{12}</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gi</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">mutate</span><span class="op">(</span></span>
+<span>        seqnames1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="st">'XVI'</span>, <span class="fu"><a href="https://rdrr.io/r/base/levels.html">levels</a></span><span class="op">(</span><span class="va">seqnames1</span><span class="op">)</span><span class="op">)</span>, </span>
+<span>        strand1 <span class="op">=</span> <span class="st">'+'</span>, </span>
+<span>        start2 <span class="op">=</span> <span class="va">end1</span>, </span>
+<span>        width2 <span class="op">=</span> <span class="va">width1</span> <span class="op">+</span> <span class="fl">100</span>, </span>
+<span>        score <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">gi</span><span class="op">)</span><span class="op">)</span>, </span>
+<span>        is_cis <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">seqnames1</span> <span class="op">==</span> <span class="va">seqnames2</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The initiated RStudio Server instance will be available at <a href="https://localhost:8787">https://localhost:8787</a>.</p>
-<!-- 
-# System dependencies and conda 
-
-A pre-configured `micromamba` environment called `BiocBook` is available 
-once the Docker image is loaded. It provides all the softwares listed in 
-`requirements.yml`. 
-
-
-::: {.cell layout-align="center" filename='bash'}
-
-```{.sh .cell-code}
-docker run -it ghcr.io/js2264/biocbook.tidyomics:devel bash
-micromamba activate BiocBook
-```
-:::
-
--->
-</section><section id="session-info" class="level1 unnumbered"><h1 class="unnumbered">Session info</h1>
+</section><section id="filtering-interactions" class="level3" data-number="2.2.2"><h3 data-number="2.2.2" class="anchored" data-anchor-id="filtering-interactions">
+<span class="header-section-number">2.2.2</span> Filtering interactions</h3>
+<p>Here again, the <code><a href="https://rdrr.io/r/stats/filter.html">filter()</a></code> function can operate on <code>GInteractions</code> objects to filter entries using a boolean condition.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gi</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">seqnames1</span> <span class="op">==</span> <span class="st">'I'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gi</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">seqnames2</span> <span class="op">==</span> <span class="st">'I'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gi</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">mutate</span><span class="op">(</span>score <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">gi</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">seqnames2</span> <span class="op">==</span> <span class="st">'I'</span>, <span class="va">score</span> <span class="op">&gt;</span> <span class="fl">0.2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="overlapping-anchors" class="level3" data-number="2.2.3"><h3 data-number="2.2.3" class="anchored" data-anchor-id="overlapping-anchors">
+<span class="header-section-number">2.2.3</span> Overlapping anchors</h3>
+<p><code>join_overlap_left()</code> function defined in <code>plyranges</code> package has been adapted to work with</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">centros</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">'extdata'</span>, <span class="st">'col'</span>, package <span class="op">=</span> <span class="st">'Bioc2024tidyWorkshop'</span>, mustWork <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">read_tsv</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">as_granges</span><span class="op">(</span>seqnames <span class="op">=</span> <span class="va">seqID</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">anchor_center</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">stretch</span><span class="op">(</span><span class="fl">20000</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gi</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">join_overlap_left</span><span class="op">(</span><span class="va">centros</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">patternName</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>pin_anchors{12}</code> functions can be used to restrict the overlap function to only one or the other anchor of each interaction.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gi</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">pin_anchors1</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">join_overlap_left</span><span class="op">(</span><span class="va">centros</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">patternName</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gi</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">pin_anchors2</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">join_overlap_left</span><span class="op">(</span><span class="va">centros</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">patternName</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="real-world-use-case-computing-a-ps" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="real-world-use-case-computing-a-ps">
+<span class="header-section-number">2.3</span> Real-world use case: computing a P(s)</h2>
+<p><em>Recommended time: 20 min</em></p>
+<section id="importing-data-from-pairs-file" class="level3" data-number="2.3.1"><h3 data-number="2.3.1" class="anchored" data-anchor-id="importing-data-from-pairs-file">
+<span class="header-section-number">2.3.1</span> Importing data from pairs file</h3>
+<p>Let’s first import pairs as a <code>tibble</code>, then coerce them into <code>GInterctions</code>.<br>
+The <code>mESCs.pairs.gz</code> example dataset is provided by the workshop package.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pairsf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">'extdata'</span>, <span class="st">'mESCs.pairs.gz'</span>, package <span class="op">=</span> <span class="st">'Bioc2024tidyWorkshop'</span>, mustWork <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">pairs</span> <span class="op">&lt;-</span> <span class="fu">read_tsv</span><span class="op">(</span><span class="va">pairsf</span>, col_names <span class="op">=</span> <span class="cn">FALSE</span>, comment <span class="op">=</span> <span class="st">"#"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">set_names</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>        <span class="st">"ID"</span>, <span class="st">"seqnames1"</span>, <span class="st">"start1"</span>, <span class="st">"seqnames2"</span>, <span class="st">"start2"</span>, <span class="st">"strand1"</span>, <span class="st">"strand2"</span></span>
+<span>    <span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">as_ginteractions</span><span class="op">(</span>end1 <span class="op">=</span> <span class="va">start1</span>, end2 <span class="op">=</span> <span class="va">start2</span>, keep.extra.columns <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="counting-interactions-by-strands" class="level3" data-number="2.3.2"><h3 data-number="2.3.2" class="anchored" data-anchor-id="counting-interactions-by-strands">
+<span class="header-section-number">2.3.2</span> Counting interactions by strands</h3>
+<p>We can get insights in the short-scale genomic-distance-dependent frequency of pairs according to their strand combination.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">pairs</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">add_pairdist</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">pairdist</span> <span class="op">&lt;</span> <span class="fl">2000</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">group_by</span><span class="op">(</span><span class="va">strand1</span>, <span class="va">strand2</span>, <span class="va">pairdist</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">count</span><span class="op">(</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">df</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">pairdist</span>, y <span class="op">=</span> <span class="va">n</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/interaction.html">interaction</a></span><span class="op">(</span><span class="va">strand1</span>, <span class="va">strand2</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">geom_smooth</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">scale_y_log10</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="plot-ps" class="level3" data-number="2.3.3"><h3 data-number="2.3.3" class="anchored" data-anchor-id="plot-ps">
+<span class="header-section-number">2.3.3</span> Plot P(s)</h3>
+<p>More generally, we can compute genome-wide genomic-distance-dependent interaction frequency, or P(s).</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1.1</span><span class="op">^</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">200</span><span class="op">-</span><span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">lmc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/coef.html">coef</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1161443398</span><span class="op">)</span><span class="op">~</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">x</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, <span class="va">x</span><span class="op">[</span><span class="fl">200</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">bins_breaks</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">lmc</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">*</span><span class="va">x</span> <span class="op">+</span> <span class="va">lmc</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">bins_widths</span> <span class="op">&lt;-</span> <span class="fu">lead</span><span class="op">(</span><span class="va">bins_breaks</span><span class="op">)</span> <span class="op">-</span> <span class="va">bins_breaks</span></span>
+<span></span>
+<span><span class="co"># Bin distances</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">pairs</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">add_pairdist</span><span class="op">(</span>colname <span class="op">=</span> <span class="st">'s'</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">mutate</span><span class="op">(</span></span>
+<span>        binned_s <span class="op">=</span> <span class="va">bins_breaks</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cut.html">cut</a></span><span class="op">(</span><span class="va">s</span>, <span class="va">bins_breaks</span><span class="op">)</span><span class="op">)</span><span class="op">]</span>, </span>
+<span>        bin_width <span class="op">=</span> <span class="va">bins_widths</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cut.html">cut</a></span><span class="op">(</span><span class="va">s</span>, <span class="va">bins_breaks</span><span class="op">)</span><span class="op">)</span><span class="op">]</span></span>
+<span>    <span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">group_by</span><span class="op">(</span><span class="va">binned_s</span>, <span class="va">bin_width</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">count</span><span class="op">(</span>name <span class="op">=</span> <span class="st">"n"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">as_tibble</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">mutate</span><span class="op">(</span>Ps <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span> <span class="op">/</span> <span class="va">bin_width</span><span class="op">)</span></span>
+<span>    </span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">df</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">binned_s</span>, y <span class="op">=</span> <span class="va">Ps</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">geom_line</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">scale_y_log10</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">scale_x_log10</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">annotation_logticks</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">labs</span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Genomic distance"</span>, y <span class="op">=</span> <span class="st">"Contact frequency"</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">theme_bw</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="resources" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="resources">Resources</h2>
+</section><section id="session-info" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="session-info">Session info</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -350,10 +468,10 @@ Click to expand 👇
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>,<span class="st">"Package"</span><span class="op">]</span>, </span>
 <span>    include_base <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span>
@@ -1059,10 +1177,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../pages/manipulating-genomic-interval-data.html" class="pagination-link" aria-label="Manipulating genomic interval data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Manipulating genomic interval data</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pages/preamble.html" class="pagination-link" aria-label="Preamble">
-        <span class="nav-page-text">Preamble</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/manipulating-summarized-experiment-data.html" class="pagination-link" aria-label="Manipulating summarized experiment data">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Manipulating summarized experiment data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

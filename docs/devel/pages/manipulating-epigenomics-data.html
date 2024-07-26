@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>BiocBook.tidyomics</title>
+<title>BiocBook.tidyomics - 5&nbsp; Manipulating epigenomics data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -53,24 +53,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./pages/preamble.html" rel="next">
-<link href="./assets/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../pages/manipulating-single-cell-data.html" rel="next">
+<link href="../pages/manipulating-transcriptomic-data.html" rel="prev">
+<link href="../assets/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -105,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welcome</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/manipulating-transcriptomic-data.html">Specific omics</a></li><li class="breadcrumb-item"><a href="../pages/manipulating-epigenomics-data.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Manipulating epigenomics data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -116,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">BiocBook.tidyomics</a> 
+      <a href="../">BiocBook.tidyomics</a> 
         <div class="sidebar-tools-main">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-git"></i></a>
@@ -145,13 +146,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/preamble.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/preamble.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preamble</span></a>
   </div>
 </li>
@@ -166,19 +167,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-genomic-interval-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-genomic-interval-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Manipulating genomic interval data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-genomic-interaction-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-genomic-interaction-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Manipulating genomic interaction data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-summarized-experiment-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-summarized-experiment-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Manipulating summarized experiment data</span></span></a>
   </div>
 </li>
@@ -195,31 +196,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-transcriptomic-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-transcriptomic-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Manipulating transcriptomic data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-epigenomics-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-epigenomics-data.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Manipulating epigenomics data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-single-cell-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-single-cell-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Manipulating single-cell data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-spatial-single-cell-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-spatial-single-cell-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Manipulating spatial single-cell data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/manipulating-mass-cytometry-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/manipulating-mass-cytometry-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Manipulating mass cytometry data</span></span></a>
   </div>
 </li>
@@ -236,13 +237,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/helper-packages.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/helper-packages.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Helper packages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/future-directions.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/future-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Future directions</span></span></a>
   </div>
 </li>
@@ -256,15 +257,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#docker-image" id="toc-docker-image" class="nav-link" data-scroll-target="#docker-image">Docker image</a></li>
-  <li><a href="#rstudio-server" id="toc-rstudio-server" class="nav-link" data-scroll-target="#rstudio-server">RStudio Server</a></li>
+<li>
+<a href="#introduction-to-tidycoverage" id="toc-introduction-to-tidycoverage" class="nav-link active" data-scroll-target="#introduction-to-tidycoverage"><span class="header-section-number">5.1</span> Introduction to <code>tidyCoverage</code></a>
+  <ul class="collapse">
+<li><a href="#coverageexperiment-and-aggregatedcoverage-class" id="toc-coverageexperiment-and-aggregatedcoverage-class" class="nav-link" data-scroll-target="#coverageexperiment-and-aggregatedcoverage-class"><span class="header-section-number">5.1.1</span> <code>CoverageExperiment</code> and <code>AggregatedCoverage</code> class</a></li>
+  <li><a href="#creating-a-coverageexperiment-object-from-tracks-and-features" id="toc-creating-a-coverageexperiment-object-from-tracks-and-features" class="nav-link" data-scroll-target="#creating-a-coverageexperiment-object-from-tracks-and-features"><span class="header-section-number">5.1.2</span> Creating a <code>CoverageExperiment</code> object from tracks and features</a></li>
+  <li><a href="#tidy-coverage-thats-right" id="toc-tidy-coverage-thats-right" class="nav-link" data-scroll-target="#tidy-coverage-thats-right"><span class="header-section-number">5.1.3</span> Tidy coverage? That’s right!</a></li>
+  <li><a href="#expand-or-aggregate" id="toc-expand-or-aggregate" class="nav-link" data-scroll-target="#expand-or-aggregate"><span class="header-section-number">5.1.4</span> <code>expand()</code> or <code>aggregate()</code></a></li>
+  <li><a href="#visualizing-aggregated-coverage" id="toc-visualizing-aggregated-coverage" class="nav-link" data-scroll-target="#visualizing-aggregated-coverage"><span class="header-section-number">5.1.5</span> Visualizing aggregated coverage</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#real-world-use-case-studying-epigenomic-landscape-of-reulatory-elements" id="toc-real-world-use-case-studying-epigenomic-landscape-of-reulatory-elements" class="nav-link" data-scroll-target="#real-world-use-case-studying-epigenomic-landscape-of-reulatory-elements"><span class="header-section-number">5.2</span> Real-world use case: studying epigenomic landscape of reulatory elements</a>
+  <ul class="collapse">
+<li><a href="#fetch-coverage-data-from-encode" id="toc-fetch-coverage-data-from-encode" class="nav-link" data-scroll-target="#fetch-coverage-data-from-encode"><span class="header-section-number">5.2.1</span> Fetch coverage data from ENCODE</a></li>
+  <li><a href="#plotting-coverage-data-over-several-loci" id="toc-plotting-coverage-data-over-several-loci" class="nav-link" data-scroll-target="#plotting-coverage-data-over-several-loci"><span class="header-section-number">5.2.2</span> Plotting coverage data over several loci</a></li>
+  <li><a href="#import-dnase-peaks-from-encode" id="toc-import-dnase-peaks-from-encode" class="nav-link" data-scroll-target="#import-dnase-peaks-from-encode"><span class="header-section-number">5.2.3</span> Import DNase peaks from ENCODE</a></li>
+  <li><a href="#generating-coverage-aggregates-and-heatmaps-over-dnase-peak" id="toc-generating-coverage-aggregates-and-heatmaps-over-dnase-peak" class="nav-link" data-scroll-target="#generating-coverage-aggregates-and-heatmaps-over-dnase-peak"><span class="header-section-number">5.2.4</span> Generating coverage aggregates and heatmaps over DNAse peak</a></li>
+  </ul>
+</li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info">Session info</a></li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">BiocBook.tidyomics</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/manipulating-transcriptomic-data.html">Specific omics</a></li><li class="breadcrumb-item"><a href="../pages/manipulating-epigenomics-data.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Manipulating epigenomics data</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Manipulating epigenomics data</span>
+</h1>
 </div>
 
 
@@ -278,70 +298,166 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><p><img src="assets/cover.png" title="BiocBook.tidyomics" class="quarto-cover-image img-fluid"></p>
-<p><strong>Package:</strong> BiocBook.tidyomics<br><strong>Authors:</strong> Jacques Serizay [aut, cre]<br><strong>Compiled:</strong> 2024-07-26<br><strong>Package version:</strong> 0.98.0<br><strong>R version:</strong> <b style="color:red;">R version 4.4.1 (2024-06-14)</b><br><strong>BioC version:</strong> <b style="color:red;">3.20</b><br><strong>License:</strong> MIT + file LICENSE<br></p>
-<section id="welcome" class="level1 unnumbered"><h1 class="unnumbered">Welcome</h1>
-<p>This is the landing page of the <code>BiocBook</code> entitled <em>…</em>.</p>
-<p>This book introduces the reader to <em>…</em>.</p>
-</section><section id="docker-image" class="level1 unnumbered"><h1 class="unnumbered">Docker image</h1>
-<p>A <code>Docker</code> image built from this repository is available here:</p>
-<p>👉 <a href="https://ghcr.io/js2264/biocbook.tidyomics">ghcr.io/js2264/biocbook.tidyomics</a> 🐳</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Get started now 🎉
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can get access to all the packages used in this book in &lt; 1 minute, using this command in a terminal:</p>
+</header><section id="introduction-to-tidycoverage" class="level2" data-number="5.1"><h2 data-number="5.1" class="anchored" data-anchor-id="introduction-to-tidycoverage">
+<span class="header-section-number">5.1</span> Introduction to <code>tidyCoverage</code>
+</h2>
+<section id="coverageexperiment-and-aggregatedcoverage-class" class="level3" data-number="5.1.1"><h3 data-number="5.1.1" class="anchored" data-anchor-id="coverageexperiment-and-aggregatedcoverage-class">
+<span class="header-section-number">5.1.1</span> <code>CoverageExperiment</code> and <code>AggregatedCoverage</code> class</h3>
+<p><em>Recommended time: 5 min</em></p>
+<p>Both classes are built on top of <code>SummarizedExperiment</code> class of objects.</p>
 <div class="cell" data-layout-align="center">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>bash</strong></pre>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">tidyCoverage</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">ce</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">ac</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ce</span></span>
+<span></span>
+<span><span class="va">ac</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-it</span> ghcr.io/js2264/biocbook.tidyomics:devel R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-</section><section id="rstudio-server" class="level1 unnumbered"><h1 class="unnumbered">RStudio Server</h1>
-<p>An RStudio Server instance can be initiated from the <code>Docker</code> image as follows:</p>
+</section><section id="creating-a-coverageexperiment-object-from-tracks-and-features" class="level3" data-number="5.1.2"><h3 data-number="5.1.2" class="anchored" data-anchor-id="creating-a-coverageexperiment-object-from-tracks-and-features">
+<span class="header-section-number">5.1.2</span> Creating a <code>CoverageExperiment</code> object from tracks and features</h3>
+<p><em>Recommended time: 10 min</em></p>
+<p>A <code>CoverageExperiment</code> object extracts coverage scores from <code>tracks</code> (typically a named <code>BigWigFileList</code> or a list of already imported <code>RleList</code>s), over a list of genomic ranges of interest (typically a named <code>GRangesList</code>).</p>
 <div class="cell" data-layout-align="center">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>bash</strong></pre>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tracks</span> <span class="op">&lt;-</span> <span class="fu">BigWigFileList</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>    mnase <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"MNase.bw"</span>, package <span class="op">=</span> <span class="st">"tidyCoverage"</span><span class="op">)</span>, </span>
+<span>    cohesin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"Scc1.bw"</span>, package <span class="op">=</span> <span class="st">"tidyCoverage"</span><span class="op">)</span>  </span>
+<span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">features</span> <span class="op">&lt;-</span> <span class="fu">GRangesList</span><span class="op">(</span></span>
+<span>    TSSs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"TSSs.bed"</span>, package <span class="op">=</span> <span class="st">"tidyCoverage"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">import</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">2000</span><span class="op">)</span>, </span>
+<span>    TTSs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"TTSs.bed"</span>, package <span class="op">=</span> <span class="st">"Bioc2024tidyWorkshop"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">import</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">2000</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ce2</span> <span class="op">&lt;-</span> <span class="fu">CoverageExperiment</span><span class="op">(</span></span>
+<span>    tracks <span class="op">=</span> <span class="va">tracks</span>, </span>
+<span>    features <span class="op">=</span> <span class="va">features</span>,</span>
+<span>    width <span class="op">=</span> <span class="fl">2000</span>, </span>
+<span>    ignore.strand <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ce2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="dt">\</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--volume</span> <span class="op">&lt;</span>local_folder<span class="op">&gt;</span>:<span class="op">&lt;</span>destination_folder<span class="op">&gt;</span> <span class="dt">\</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">-e</span> PASSWORD=OHCA <span class="dt">\</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">-p</span> 8787:8787 <span class="dt">\</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    ghcr.io/js2264/biocbook.tidyomics:devel</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Remember, this class of object is nearly identical to a <code>SummarizedExperiment</code> object.</p>
+<p>The slight difference is that each cell of the <code>coverage</code> assay is a <code>list</code> with a single element which is an array.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">colData</span><span class="op">(</span><span class="va">ce2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rowData</span><span class="op">(</span><span class="va">ce2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">assay</span><span class="op">(</span><span class="va">ce2</span>, <span class="st">'coverage'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="fu">assay</span><span class="op">(</span><span class="va">ce2</span>, <span class="st">'coverage'</span><span class="op">)</span><span class="op">[</span><span class="st">'TSSs'</span>, <span class="st">'mnase'</span><span class="op">]</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="fu">assay</span><span class="op">(</span><span class="va">ce2</span>, <span class="st">'coverage'</span><span class="op">)</span><span class="op">[[</span><span class="st">'TSSs'</span>, <span class="st">'mnase'</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="fu">assay</span><span class="op">(</span><span class="va">ce2</span>, <span class="st">'coverage'</span><span class="op">)</span><span class="op">[[</span><span class="st">'TSSs'</span>, <span class="st">'mnase'</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section><section id="tidy-coverage-thats-right" class="level3" data-number="5.1.3"><h3 data-number="5.1.3" class="anchored" data-anchor-id="tidy-coverage-thats-right">
+<span class="header-section-number">5.1.3</span> Tidy coverage? That’s right!</h3>
+<p><em>Recommended time: 5 min</em></p>
+<p>Methods for <code>tidyverse</code> action verbs are available for <code>CoverageExperiment</code> objects, through the <code>tidySummarizedExperiment</code> package.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/stemangiola/tidySummarizedExperiment">tidySummarizedExperiment</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ce2</span></span>
+<span></span>
+<span><span class="va">ce2</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">features</span> <span class="op">==</span> <span class="st">'TSSs'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ce2</span> <span class="op">|&gt;</span> <span class="fu">slice</span><span class="op">(</span><span class="fl">2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ce2</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="va">features</span>, <span class="va">n</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The initiated RStudio Server instance will be available at <a href="https://localhost:8787">https://localhost:8787</a>.</p>
-<!-- 
-# System dependencies and conda 
-
-A pre-configured `micromamba` environment called `BiocBook` is available 
-once the Docker image is loaded. It provides all the softwares listed in 
-`requirements.yml`. 
-
-
-::: {.cell layout-align="center" filename='bash'}
-
-```{.sh .cell-code}
-docker run -it ghcr.io/js2264/biocbook.tidyomics:devel bash
-micromamba activate BiocBook
-```
-:::
-
--->
-</section><section id="session-info" class="level1 unnumbered"><h1 class="unnumbered">Session info</h1>
+</section><section id="expand-or-aggregate" class="level3" data-number="5.1.4"><h3 data-number="5.1.4" class="anchored" data-anchor-id="expand-or-aggregate">
+<span class="header-section-number">5.1.4</span> <code>expand()</code> or <code>aggregate()</code>
+</h3>
+<p><em>Recommended time: 5 min</em></p>
+<p>The <code>expand</code> method provided in the <code>tidyCoverage</code> package is used to turn a <code>CoverageExperiment</code> object into a tidy <code>tibble</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tib</span> <span class="op">&lt;-</span> <span class="fu">expand</span><span class="op">(</span><span class="va">ce2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">tib</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The <code>aggregate</code> method provided in the <code>tidyCoverage</code> package is used to turn a <code>CoverageExperiment</code> object into an <code>AggregatedCoverage</code>. This class of object stores different statistical measurements of the coverage over each element of the <code>GRangesList</code> provided in the <code>CoverageExperiment</code> object.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">ac2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aggregate.html">aggregate</a></span><span class="op">(</span><span class="va">ce2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ac2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="visualizing-aggregated-coverage" class="level3" data-number="5.1.5"><h3 data-number="5.1.5" class="anchored" data-anchor-id="visualizing-aggregated-coverage">
+<span class="header-section-number">5.1.5</span> Visualizing aggregated coverage</h3>
+<p><em>Recommended time: 10 min</em></p>
+<p>The development version of <code>tidyCoverage</code> now ships two <code>geom_*</code> with appropriate default mapping aesthetics:</p>
+<ul>
+<li>
+<code>geom_coverage()</code> for <code>CoverageExperiment</code> objects.</li>
+<li>
+<code>geom_aggrcoverage()</code> for <code>AggregatedCoverage</code> objects.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">CoverageExperiment</span><span class="op">(</span><span class="va">tracks</span>, <span class="fu">GRanges</span><span class="op">(</span><span class="st">"II:1-100000"</span><span class="op">)</span>, window <span class="op">=</span> <span class="fl">100</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">expand</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_coverage</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">facet_grid</span><span class="op">(</span><span class="va">track</span> <span class="op">~</span> <span class="va">features</span>, scales <span class="op">=</span> <span class="st">"free"</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">labs</span><span class="op">(</span>x <span class="op">=</span> <span class="st">'chrV'</span>, y <span class="op">=</span> <span class="st">'Signal coverage'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">ac2</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">geom_aggrcoverage</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">facet_grid</span><span class="op">(</span><span class="va">track</span> <span class="op">~</span> <span class="va">features</span>, scales <span class="op">=</span> <span class="st">"free"</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">labs</span><span class="op">(</span>x <span class="op">=</span> <span class="st">'Distance from genomic features'</span>, y <span class="op">=</span> <span class="st">'Signal coverage'</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="real-world-use-case-studying-epigenomic-landscape-of-reulatory-elements" class="level2" data-number="5.2"><h2 data-number="5.2" class="anchored" data-anchor-id="real-world-use-case-studying-epigenomic-landscape-of-reulatory-elements">
+<span class="header-section-number">5.2</span> Real-world use case: studying epigenomic landscape of reulatory elements</h2>
+<section id="fetch-coverage-data-from-encode" class="level3" data-number="5.2.1"><h3 data-number="5.2.1" class="anchored" data-anchor-id="fetch-coverage-data-from-encode">
+<span class="header-section-number">5.2.1</span> Fetch coverage data from ENCODE</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">AnnotationHub</span><span class="op">)</span></span>
+<span><span class="va">ah</span> <span class="op">&lt;-</span> <span class="fu">AnnotationHub</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">ids</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'AH32207'</span>, <span class="st">'AH35187'</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">ids</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'DNAse'</span>, <span class="st">'H3K4me3'</span><span class="op">)</span></span>
+<span><span class="va">bws</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">ids</span>, <span class="kw">function</span><span class="op">(</span><span class="va">.x</span><span class="op">)</span> <span class="va">ah</span><span class="op">[[</span><span class="va">.x</span><span class="op">]</span><span class="op">]</span> <span class="op">|&gt;</span> <span class="fu">resource</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">BigWigFileList</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">bws</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">ids</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="plotting-coverage-data-over-several-loci" class="level3" data-number="5.2.2"><h3 data-number="5.2.2" class="anchored" data-anchor-id="plotting-coverage-data-over-several-loci">
+<span class="header-section-number">5.2.2</span> Plotting coverage data over several loci</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">ce3</span> <span class="op">&lt;-</span> <span class="fu">CoverageExperiment</span><span class="op">(</span></span>
+<span>    <span class="va">bws</span>, </span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>        ccno <span class="op">=</span> <span class="fu">GRanges</span><span class="op">(</span><span class="st">"chr5:55220001-55235000"</span><span class="op">)</span>,</span>
+<span>        mcidas <span class="op">=</span> <span class="fu">GRanges</span><span class="op">(</span><span class="st">"chr5:55159001-55174000"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span>, </span>
+<span>    window <span class="op">=</span> <span class="fl">50</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu">expand</span><span class="op">(</span><span class="va">ce3</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">mutate</span><span class="op">(</span>coverage <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/oob.html">oob_squish</a></span><span class="op">(</span><span class="va">coverage</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_coverage</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>fill <span class="op">=</span> <span class="va">track</span><span class="op">)</span>, unit <span class="op">=</span> <span class="st">'Mb'</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">facet_grid</span><span class="op">(</span><span class="va">track</span><span class="op">~</span><span class="va">features</span>, scales <span class="op">=</span> <span class="st">'free'</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="import-dnase-peaks-from-encode" class="level3" data-number="5.2.3"><h3 data-number="5.2.3" class="anchored" data-anchor-id="import-dnase-peaks-from-encode">
+<span class="header-section-number">5.2.3</span> Import DNase peaks from ENCODE</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">features</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>DNase <span class="op">=</span> <span class="va">ah</span><span class="op">[[</span><span class="st">'AH30077'</span><span class="op">]</span><span class="op">]</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">zScore</span> <span class="op">&gt;</span> <span class="fl">100</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1000</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="generating-coverage-aggregates-and-heatmaps-over-dnase-peak" class="level3" data-number="5.2.4"><h3 data-number="5.2.4" class="anchored" data-anchor-id="generating-coverage-aggregates-and-heatmaps-over-dnase-peak">
+<span class="header-section-number">5.2.4</span> Generating coverage aggregates and heatmaps over DNAse peak</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">ce4</span> <span class="op">&lt;-</span> <span class="fu">CoverageExperiment</span><span class="op">(</span><span class="va">bws</span>, <span class="va">features</span>, width <span class="op">=</span> <span class="fl">2000</span>, window <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/aggregate.html">aggregate</a></span><span class="op">(</span><span class="va">ce4</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">coord</span>, y <span class="op">=</span> <span class="va">mean</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">geom_aggrcoverage</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>col <span class="op">=</span> <span class="va">track</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span><span class="va">track</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu">labs</span><span class="op">(</span>x <span class="op">=</span> <span class="st">'Distance from DNAse peak'</span>, y <span class="op">=</span> <span class="st">'Signal'</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="resources" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="resources">Resources</h2>
+</section><section id="session-info" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="session-info">Session info</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -350,10 +466,10 @@ Click to expand 👇
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>,<span class="st">"Package"</span><span class="op">]</span>, </span>
 <span>    include_base <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span>
@@ -1059,10 +1175,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../pages/manipulating-transcriptomic-data.html" class="pagination-link" aria-label="Manipulating transcriptomic data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Manipulating transcriptomic data</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pages/preamble.html" class="pagination-link" aria-label="Preamble">
-        <span class="nav-page-text">Preamble</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/manipulating-single-cell-data.html" class="pagination-link" aria-label="Manipulating single-cell data">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Manipulating single-cell data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
