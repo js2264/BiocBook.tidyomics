@@ -1,0 +1,21 @@
+# Manipulating single-cell data
+
+## Resources {-}
+
+https://stemangiola.github.io/tidySingleCellExperiment/articles/introduction.html
+
+## Session info {-}
+
+::: {.callout-note collapse="true"}
+
+## Click to expand 👇
+
+```{r "session info"}
+#| cache: false
+sessioninfo::session_info(
+    installed.packages()[,"Package"], 
+    include_base = TRUE
+)
+```
+
+:::

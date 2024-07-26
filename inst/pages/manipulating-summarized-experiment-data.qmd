@@ -1,0 +1,21 @@
+# Manipulating summarized experiment data
+
+## Resources {-}
+
+https://stemangiola.github.io/tidySummarizedExperiment/articles/introduction.html
+
+## Session info {-}
+
+::: {.callout-note collapse="true"}
+
+## Click to expand 👇
+
+```{r "session info"}
+#| cache: false
+sessioninfo::session_info(
+    installed.packages()[,"Package"], 
+    include_base = TRUE
+)
+```
+
+:::

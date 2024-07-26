@@ -1,0 +1,22 @@
+# Manipulating spatial single-cell data
+
+## Resources {-}
+
+https://bioconductor.org/packages/release/bioc/vignettes/SpatialExperiment/inst/doc/SpatialExperiment.html
+https://pachterlab.github.io/SpatialFeatureExperiment/
+
+## Session info {-}
+
+::: {.callout-note collapse="true"}
+
+## Click to expand 👇
+
+```{r "session info"}
+#| cache: false
+sessioninfo::session_info(
+    installed.packages()[,"Package"], 
+    include_base = TRUE
+)
+```
+
+:::

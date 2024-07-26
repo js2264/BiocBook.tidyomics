@@ -1,0 +1,85 @@
+# Manipulating genomic interval data
+
+##  Importing `GRanges` from files
+
+*Recommended time: 10 min*
+
+The `BiocIO::import()` generic function lets one import `bed` files (or alike) 
+into `GRanges` object in R. 
+
+```{r eval = FALSE}
+library(GenomicRanges)
+
+library(rtracklayer)
+
+bedf <- system.file('extdata', 'S288C-borders.bed', package = 'Bioc2024tidyWorkshop', mustWork = TRUE)
+
+import(bedf)
+```
+
+The tidy way of importing genomic ranges in R, however, is to read files as 
+a `data.frame` (or `tibble`) and _coerce_ it as a `GRanges` once it's imported in 
+memory. 
+
+```{r eval = FALSE}
+library(tidyverse)
+
+tib <- read_tsv(bedf, col_names = FALSE)
+
+tib 
+
+library(plyranges)
+
+gr <- as_granges(tib, seqnames = X1, start = X2, end = X3)
+
+gr
+```
+
+Note how refering to column names is done using [tidy evaluation](https://dplyr.tidyverse.org/articles/programming.html#data-masking). 
+
+##  Manipulating `GRanges` with tidy verbs
+
+*Recommended time: 10 min*
+
+With `plyranges`, [a number of tidy operations](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1597-8/tables/1) are readily available, e.g.: 
+
+- `mutate()`
+- `select()`
+- `filter()`
+- `group_by()` + `summarize()`
+- ... 
+
+Just like with `tidyverse` functions, these operations work well with the native 
+`|>` pipe in R. 
+
+```{r eval = FALSE}
+gr |> 
+    mutate(score = runif(n())) |> 
+    filter(score > 0.2) |> 
+    mutate(round_score = round(score, digits = 1)) |> 
+    group_by(round_score) |> 
+    summarize(mean = mean(score))
+```
+
+But really, what `plyranges` excels at is providing direct access to "protected" 
+variables, i.e. `seqnames`, `start`, `end`, `width`, `strand`, ...
+
+```{r eval = FALSE}
+gr |> 
+    mutate(
+        seqnames = factor('XVI', levels(seqnames)), 
+        width = 1, 
+        strand = rep(c('-', '+'), n()/2)
+    )
+```
+
+Finally, a number of operations for genomic arithmetics are provided by `plyranges`: 
+
+```{r eval = FALSE}
+gr |> 
+    anchor_center() |> 
+    stretch(extend = -1000) |> 
+    shift_upstream(250) |> 
+    flank_upstream(100)
+```
+

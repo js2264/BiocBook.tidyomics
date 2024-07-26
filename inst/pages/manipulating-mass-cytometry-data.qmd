@@ -1,0 +1,21 @@
+# Manipulating mass cytometry data
+
+## Resources {-}
+
+https://keyes-timothy.github.io/tidytof/articles/tidytof.html
+
+## Session info {-}
+
+::: {.callout-note collapse="true"}
+
+## Click to expand 👇
+
+```{r "session info"}
+#| cache: false
+sessioninfo::session_info(
+    installed.packages()[,"Package"], 
+    include_base = TRUE
+)
+```
+
+:::
