@@ -20,7 +20,7 @@ Imports:
     tidyomics,
     tidySummarizedExperiment, 
     tidySingleCellExperiment, 
-    tidySeurat, 
+    tidyseurat, 
     tidySpatialExperiment, 
     tidytof, 
     tidyFlowCore, 
