@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>tidyomics: Enhancing Omic Data Analyses - 11&nbsp; Future directions</title>
+<title>tidyomics: Enhancing Omic Data Analyses - 1&nbsp; Genomic intervals data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,8 +60,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../pages/tidyomics-contributors.html" rel="next">
-<link href="../pages/packages-list.html" rel="prev">
+<link href="../pages/genomic-interaction.html" rel="next">
+<link href="../pages/preamble.html" rel="prev">
 <link href="../assets/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/packages-list.html">Additional resources</a></li><li class="breadcrumb-item"><a href="../pages/future-directions.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Future directions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/genomic-interval.html">Fundamentals concepts</a></li><li class="breadcrumb-item"><a href="../pages/genomic-interval.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Genomic intervals data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/genomic-interval.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/genomic-interval.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Genomic intervals data</span></span></a>
   </div>
 </li>
@@ -249,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/future-directions.html" class="sidebar-item-text sidebar-link active">
+  <a href="../pages/future-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Future directions</span></span></a>
   </div>
 </li>
@@ -280,15 +280,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a></li>
+<li><a href="#importing-granges-from-files" id="toc-importing-granges-from-files" class="nav-link active" data-scroll-target="#importing-granges-from-files"><span class="header-section-number">1.1</span> Importing <code>GRanges</code> from files</a></li>
+  <li><a href="#manipulating-granges-with-tidy-verbs" id="toc-manipulating-granges-with-tidy-verbs" class="nav-link" data-scroll-target="#manipulating-granges-with-tidy-verbs"><span class="header-section-number">1.2</span> Manipulating <code>GRanges</code> with tidy verbs</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info">Session info</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/packages-list.html">Additional resources</a></li><li class="breadcrumb-item"><a href="../pages/future-directions.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Future directions</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/genomic-interval.html">Fundamentals concepts</a></li><li class="breadcrumb-item"><a href="../pages/genomic-interval.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Genomic intervals data</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Future directions</span>
+<span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Genomic intervals data</span>
 </h1>
 </div>
 
@@ -303,13 +305,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><ul>
-<li><p>motifs?</p></li>
-<li><p>sequences?</p></li>
-<li><p>helper: seqinfo?</p></li>
+</header><section id="importing-granges-from-files" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="importing-granges-from-files">
+<span class="header-section-number">1.1</span> Importing <code>GRanges</code> from files</h2>
+<p><em>Recommended time: 10 min</em></p>
+<p>The <code><a href="https://rdrr.io/pkg/BiocIO/man/IO.html">BiocIO::import()</a></code> generic function lets one import <code>bed</code> files (or alike) into <code>GRanges</code> object in R.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://bioconductor.org/packages/GenomicRanges">GenomicRanges</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">rtracklayer</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">bedf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">'extdata'</span>, <span class="st">'S288C-borders.bed'</span>, package <span class="op">=</span> <span class="st">'Bioc2024tidyWorkshop'</span>, mustWork <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">import</span><span class="op">(</span><span class="va">bedf</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The tidy way of importing genomic ranges in R, however, is to read files as a <code>data.frame</code> (or <code>tibble</code>) and <em>coerce</em> it as a <code>GRanges</code> once it’s imported in memory.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">tib</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_tsv</a></span><span class="op">(</span><span class="va">bedf</span>, col_names <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">tib</span> </span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">plyranges</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/plyranges/man/ranges-construct.html">as_granges</a></span><span class="op">(</span><span class="va">tib</span>, seqnames <span class="op">=</span> <span class="va">X1</span>, start <span class="op">=</span> <span class="va">X2</span>, end <span class="op">=</span> <span class="va">X3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gr</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Note how refering to column names is done using <a href="https://dplyr.tidyverse.org/articles/programming.html#data-masking">tidy evaluation</a>.</p>
+</section><section id="manipulating-granges-with-tidy-verbs" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="manipulating-granges-with-tidy-verbs">
+<span class="header-section-number">1.2</span> Manipulating <code>GRanges</code> with tidy verbs</h2>
+<p><em>Recommended time: 10 min</em></p>
+<p>With <code>plyranges</code>, <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1597-8/tables/1">a number of tidy operations</a> are readily available, e.g.:</p>
+<ul>
+<li><code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code></li>
+<li><code><a href="https://dplyr.tidyverse.org/reference/select.html">select()</a></code></li>
+<li><code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code></li>
+<li>
+<code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> + <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code>
+</li>
+<li>…</li>
 </ul>
-<section id="resources" class="level1 unnumbered"><h1 class="unnumbered">Resources</h1>
-</section><section id="session-info" class="level1 unnumbered"><h1 class="unnumbered">Session info</h1>
+<p>Just like with <code>tidyverse</code> functions, these operations work well with the native <code>|&gt;</code> pipe in R.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gr</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>score <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/plyranges/man/n.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">score</span> <span class="op">&gt;</span> <span class="fl">0.2</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>round_score <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">score</span>, digits <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">round_score</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/BiocGenerics/man/mean.html">mean</a></span><span class="op">(</span><span class="va">score</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>But really, what <code>plyranges</code> excels at is providing direct access to “protected” variables, i.e.&nbsp;<code>seqnames</code>, <code>start</code>, <code>end</code>, <code>width</code>, <code>strand</code>, …</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gr</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>        seqnames <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="st">'XVI'</span>, <span class="fu"><a href="https://rdrr.io/pkg/S4Vectors/man/Factor-class.html">levels</a></span><span class="op">(</span><span class="va">seqnames</span><span class="op">)</span><span class="op">)</span>, </span>
+<span>        width <span class="op">=</span> <span class="fl">1</span>, </span>
+<span>        strand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'-'</span>, <span class="st">'+'</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/pkg/plyranges/man/n.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">/</span><span class="fl">2</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Finally, a number of operations for genomic arithmetics are provided by <code>plyranges</code>:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gr</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/plyranges/man/ranges-anchor.html">anchor_center</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/plyranges/man/stretch.html">stretch</a></span><span class="op">(</span>extend <span class="op">=</span> <span class="op">-</span><span class="fl">1000</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/plyranges/man/ranges-shift.html">shift_upstream</a></span><span class="op">(</span><span class="fl">250</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/plyranges/man/ranges-flank.html">flank_upstream</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="resources" class="level1 unnumbered"><h1 class="unnumbered">Resources</h1>
+<ul>
+<li><a href="https://tidyomics.github.io/tidy-ranges-tutorial/">“Tidy Ranges Tutorial” by Michael Love</a></li>
+<li><a href="https://jserizay.com/Bioc2024tidyworkshop/">A Bioc2024 workshop on plyranges and others</a></li>
+</ul></section><section id="session-info" class="level1 unnumbered"><h1 class="unnumbered">Session info</h1>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -323,7 +390,7 @@ Click to expand 👇
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu"><a href="https://r-lib.github.io/sessioninfo/reference/session_info.html">session_info</a></span><span class="op">(</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>,<span class="st">"Package"</span><span class="op">]</span>, </span>
 <span>    include_base <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span>
@@ -1096,13 +1163,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../pages/packages-list.html" class="pagination-link" aria-label="List of packages included in the `tidyomics` framework">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">List of packages included in the <code>tidyomics</code> framework</span></span>
+      <a href="../pages/preamble.html" class="pagination-link" aria-label="Preamble">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preamble</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/tidyomics-contributors.html" class="pagination-link" aria-label="tidyomics contributors">
-        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">tidyomics contributors</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/genomic-interaction.html" class="pagination-link" aria-label="Genomic interactions data">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Genomic interactions data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>tidyomics: Enhancing Omic Data Analyses - 11&nbsp; Future directions</title>
+<title>tidyomics: Enhancing Omic Data Analyses - 8&nbsp; Flow cytometry data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,8 +60,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../pages/tidyomics-contributors.html" rel="next">
-<link href="../pages/packages-list.html" rel="prev">
+<link href="../pages/mass-cytometry.html" rel="next">
+<link href="../pages/spatial-single-cell.html" rel="prev">
 <link href="../assets/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/packages-list.html">Additional resources</a></li><li class="breadcrumb-item"><a href="../pages/future-directions.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Future directions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/transcriptomic.html">Specific omics</a></li><li class="breadcrumb-item"><a href="../pages/flow-cytometry.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Flow cytometry data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -220,7 +220,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/flow-cytometry.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/flow-cytometry.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Flow cytometry data</span></span></a>
   </div>
 </li>
@@ -249,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/future-directions.html" class="sidebar-item-text sidebar-link active">
+  <a href="../pages/future-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Future directions</span></span></a>
   </div>
 </li>
@@ -286,9 +286,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/packages-list.html">Additional resources</a></li><li class="breadcrumb-item"><a href="../pages/future-directions.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Future directions</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/transcriptomic.html">Specific omics</a></li><li class="breadcrumb-item"><a href="../pages/flow-cytometry.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Flow cytometry data</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Future directions</span>
+<span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Flow cytometry data</span>
 </h1>
 </div>
 
@@ -303,12 +303,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><ul>
-<li><p>motifs?</p></li>
-<li><p>sequences?</p></li>
-<li><p>helper: seqinfo?</p></li>
-</ul>
-<section id="resources" class="level1 unnumbered"><h1 class="unnumbered">Resources</h1>
+</header><section id="resources" class="level1 unnumbered"><h1 class="unnumbered">Resources</h1>
+<p>https://keyes-timothy.github.io/tidyFlowCore/articles/tidyFlowCore.html</p>
 </section><section id="session-info" class="level1 unnumbered"><h1 class="unnumbered">Session info</h1>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -1096,13 +1092,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../pages/packages-list.html" class="pagination-link" aria-label="List of packages included in the `tidyomics` framework">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">List of packages included in the <code>tidyomics</code> framework</span></span>
+      <a href="../pages/spatial-single-cell.html" class="pagination-link" aria-label="Spatial single-cell data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Spatial single-cell data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/tidyomics-contributors.html" class="pagination-link" aria-label="tidyomics contributors">
-        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">tidyomics contributors</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/mass-cytometry.html" class="pagination-link" aria-label="Mass cytometry data">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Mass cytometry data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
