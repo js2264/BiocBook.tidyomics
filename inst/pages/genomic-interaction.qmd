@@ -1,4 +1,4 @@
-# Manipulating genomic interaction data
+# Genomic interactions data
 
 ## What are `GInteractions`? 
 
@@ -186,10 +186,9 @@ ggplot(df, aes(x = binned_s, y = Ps)) +
     theme_bw()
 ```
 
-## Resources {-}
+# Resources {-}
 
-
-## Session info {-}
+# Session info {-}
 
 ::: {.callout-note collapse="true"}
 
@@ -204,3 +203,5 @@ sessioninfo::session_info(
 ```
 
 :::
+
+# References {-}

@@ -1,0 +1,24 @@
+# Single-cell data
+
+# Resources {-}
+
+- [tidySingleCellExperiment vignette](https://stemangiola.github.io/tidySingleCellExperiment/articles/introduction.html)
+- [A Bioc2023 workshop on tidySingleCellExperiment](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/articles/tidyGenomicsTranscriptomics.html)
+
+# Session info {-}
+
+::: {.callout-note collapse="true"}
+
+## Click to expand 👇
+
+```{r "session info"}
+#| cache: false
+sessioninfo::session_info(
+    installed.packages()[,"Package"], 
+    include_base = TRUE
+)
+```
+
+:::
+
+# References {-}

@@ -4,7 +4,7 @@ Description:
     This sentence is a placeholder. It should be changed by the author of 
     the package to describe the purpose of this BiocBook. 
     It should be at least 3 sentences otherwise `BiocCheck` will complain.
-Version: 0.98.0
+Version: 0.98.1
 Date: `r date()`
 Authors@R: 
     person(
@@ -15,16 +15,31 @@ Authors@R:
 URL: https://github.com/js2264/BiocBook.tidyomics
 BugReports: https://github.com/js2264/BiocBook.tidyomics
 Depends:
-    R (>= 4.3), 
-    tidyomics
+    R (>= 4.3)
 Imports:
+    tidyomics,
+    tidySummarizedExperiment, 
+    tidySingleCellExperiment, 
+    tidySeurat, 
+    tidySpatialExperiment, 
+    tidytof, 
+    tidyFlowCore, 
+    plyranges, 
+    plyinteractions, 
+    tidybulk, 
+    nullranges, 
+    easylift, 
+    tidygate, 
+    tidyverse
 Suggests:
-    BiocManager, 
     BiocVersion, 
     BiocStyle, 
     glue,
     sessioninfo,
     knitr 
+Remotes:
+    keyes-timothy/tidytof, 
+    stemangiola/tidygate
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 BiocType: Book

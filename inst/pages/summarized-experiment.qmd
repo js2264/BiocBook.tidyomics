@@ -1,10 +1,10 @@
-# Manipulating single-cell data
+# Summarized experiment data
 
-## Resources {-}
+# Resources {-}
 
-https://stemangiola.github.io/tidySingleCellExperiment/articles/introduction.html
+https://stemangiola.github.io/tidySummarizedExperiment/articles/introduction.html
 
-## Session info {-}
+# Session info {-}
 
 ::: {.callout-note collapse="true"}
 
@@ -19,3 +19,5 @@ sessioninfo::session_info(
 ```
 
 :::
+
+# References {-}

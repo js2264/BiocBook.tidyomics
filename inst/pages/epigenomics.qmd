@@ -1,4 +1,4 @@
-# Manipulating epigenomics data
+# Epigenomic data
 
 ## Introduction to `tidyCoverage`
 
@@ -211,9 +211,9 @@ ce4 |>
     )
 ``` 
 
-## Resources {-}
+# Resources {-}
 
-## Session info {-}
+# Session info {-}
 
 ::: {.callout-note collapse="true"}
 
@@ -228,3 +228,5 @@ sessioninfo::session_info(
 ```
 
 :::
+
+# References {-}

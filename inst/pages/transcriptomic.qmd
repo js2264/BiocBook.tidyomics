@@ -1,11 +1,9 @@
-# Future directions
-
-- motifs? 
-- sequences? 
-
-- helper: seqinfo? 
+# Transcriptomic data
 
 # Resources {-}
+
+- [tidybulk vignette](https://stemangiola.github.io/tidybulk/)
+- [Fluent genomics workflow](https://sa-lee.github.io/fluentGenomics/articles/fluentGenomics.html)
 
 # Session info {-}
 

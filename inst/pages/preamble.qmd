@@ -1,2 +1,42 @@
 # Preamble {-}
 
+`tidyomics` is an open project to develop and integrate software and 
+documentation to enable a tidy data analysis framework for omics data objects. 
+`tidyomics` enables the use of familiar `tidyverse` verbs (`select`, `filter`, 
+`mutate`, etc.) to manipulate rich data objects in the Bioconductor ecosystem.
+Importantly, the data objects are not modified, but `tidyomics` provides a tidy 
+interface to work on the native objects, leveraging existing Bioconductor 
+classes and algorithms.
+
+A key innovation in Bioconductor is the use of object-oriented programming
+and specific data structures. 
+
+As described in @Gentleman2004Sep,
+
+> an `exprSet` is a data structure that binds together array-based expression 
+> measurements with covariate and administrative data for a collection of 
+> [experiments]... [its] design facilitates a three-tier architecture for 
+> providing analysis tools for new microarray platforms: low-level data are 
+> bridged to high-level analysis manipulations via the `exprSet` structure.
+
+In Bioconductor, rich, structured data about experiments is maintained 
+throughout analyses by passing data objects from one method to another. 
+E.g. `estimateDispersions` adds dispersion information to the `rowData` 
+slot of a `DESeqDataSet` which is a sub-class of a `SummarizedExperiment`,
+therefore inheriting the structure and methods of that class. The structure of 
+the data is preserved after running the function (like many Biodonductor methods, 
+it is an endomorphic function).
+
+The goal of `tidyomics` is to preserve the object-oriented programming 
+style and stucture of Bioconductor data objects, while allowing users to 
+manipulate these data objects with expressive commands, familiar to 
+`tidyverse` users.
+
+`tidyomics` aims to allow users to flexibly explore and plot biological 
+datasets, by combining simple functions with human-readable names in a modular 
+fashion to perform complex operations, including grouping and summarization 
+tasks. Operations should still be performed with comparable efficiency to 
+the underlying base R/Bioconductor code.
+asdcasdc
+
+# References {-}

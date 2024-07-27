@@ -1,0 +1,6 @@
+# tidyomics contributors
+
+`tidyomics` is a set of R packages by an international group of developers.
+
+A list of contributors as of 2024-07-27: 
+

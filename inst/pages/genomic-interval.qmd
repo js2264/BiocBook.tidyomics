@@ -1,4 +1,4 @@
-# Manipulating genomic interval data
+# Genomic intervals data
 
 ##  Importing `GRanges` from files
 
@@ -83,3 +83,25 @@ gr |>
     flank_upstream(100)
 ```
 
+# Resources {-}
+
+- ["Tidy Ranges Tutorial" by Michael Love](https://tidyomics.github.io/tidy-ranges-tutorial/)
+- [A Bioc2024 workshop on plyranges and others](https://jserizay.com/Bioc2024tidyworkshop/)
+
+# Session info {-}
+
+::: {.callout-note collapse="true"}
+
+## Click to expand 👇
+
+```{r "session info"}
+#| cache: false
+sessioninfo::session_info(
+    installed.packages()[,"Package"], 
+    include_base = TRUE
+)
+```
+
+:::
+
+# References {-}

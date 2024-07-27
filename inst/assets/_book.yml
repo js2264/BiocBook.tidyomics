@@ -1,24 +1,27 @@
 book:
-  title: "BiocBook.tidyomics"
+  title: "tidyomics: Enhancing Omic Data Analyses"
   chapters:
     - index.qmd
     - pages/preamble.qmd
     - part: "Fundamentals concepts"
       chapters:
-        - pages/manipulating-genomic-interval-data.qmd
-        - pages/manipulating-genomic-interaction-data.qmd
-        - pages/manipulating-summarized-experiment-data.qmd
+        - pages/genomic-interval.qmd
+        - pages/genomic-interaction.qmd
+        - pages/summarized-experiment.qmd
     - part: "Specific omics"
       chapters:
-        - pages/manipulating-transcriptomic-data.qmd
-        - pages/manipulating-epigenomics-data.qmd
-        - pages/manipulating-single-cell-data.qmd
-        - pages/manipulating-spatial-single-cell-data.qmd
-        - pages/manipulating-mass-cytometry-data.qmd
+        - pages/transcriptomic.qmd
+        - pages/epigenomics.qmd
+        - pages/single-cell.qmd
+        - pages/spatial-single-cell.qmd
+        - pages/flow-cytometry.qmd
+        - pages/mass-cytometry.qmd
     - part: "Additional resources"
       chapters:
-        - pages/helper-packages.qmd
+        - pages/packages-list.qmd
         - pages/future-directions.qmd
+  appendices:
+    - pages/tidyomics-contributors.qmd
   cover-image: assets/cover.png
   favicon: assets/favicon.png
   sidebar: 

@@ -1,10 +1,10 @@
-# Manipulating summarized experiment data
+# Flow cytometry data
 
-## Resources {-}
+# Resources {-}
 
-https://stemangiola.github.io/tidySummarizedExperiment/articles/introduction.html
+https://keyes-timothy.github.io/tidyFlowCore/articles/tidyFlowCore.html
 
-## Session info {-}
+# Session info {-}
 
 ::: {.callout-note collapse="true"}
 
@@ -19,3 +19,5 @@ sessioninfo::session_info(
 ```
 
 :::
+
+# References {-}

@@ -1,4 +1,5 @@
 ```{r "intro"}
+#| eval: false
 #| echo: false
 intro <- tryCatch(
     {
@@ -21,22 +22,89 @@ intro <- tryCatch(
 )
 ```
 
-`r intro`
+## What is `tidyomics`? {-}
 
-# Welcome {-}
+The `tidyverse` and Bioconductor ecosystems are transforming R-based 
+data science and biological data analysis. **`tidyomics` bridges the gap 
+between these ecosystems, enabling analysts to leverage the power of tidy 
+data principles in omic analyses.**
 
-This is the landing page of the `BiocBook` entitled *...*.  
+This integration fosters cross-disciplinary 
+collaborations, reduces barriers to entry for new users and enhances code 
+readability, reproducibility and transparency. The tidy standard applied 
+to biological software creates an extensible development ecosystem where 
+independent researchers can interface with new software. 
 
-This book introduces the reader to *...*.  
+Ultimately, the `tidyomics` ecosystem, consisting of new and publicly available R 
+packages, has the potential to greatly accelerate scientific discovery. 
+The mission of this collaborative, worldwide project has been described in 
+more detail in [Nature Methods (2024)](https://doi.org/10.1038/s41592-024-02299-2):
 
-# Docker image {-}
+> _Hutchison, William J., Timothy J. Keyes, Helena L. Crowell, Jacques Serizay, Charlotte Soneson, Eric S. Davis, Noriaki Sato, et al. 2024. “The tidyomics ecosystem: enhancing omic data analyses.” Nat. Methods 21 (July): 1166–70. (https://doi.org/10.1038/s41592-024-02299-2)._
+
+## Core values {-}
+
+Our Code of Conduct is available [here](https://github.com/tidyomics/.github/tree/main?tab=coc-ov-file).
+
+The `tidyomics` organization is open to new members and contributions;
+it is an effort of [many developers](https://github.com/orgs/tidyomics/people) 
+in the Bioconductor community and beyond.
+
+* See our [tidyomics open challenges](https://github.com/orgs/tidyomics/projects/1)
+  project to see what we are currently working on;
+* Issues tagged with 
+  [good first issue](https://github.com/orgs/tidyomics/projects/1/views/1?filterQuery=good+first+issue)
+  are those that developers think would be good for a new developer to
+  start working on;
+* Read over our [Guidelines for contributing](https://github.com/tidyomics/.github/blob/main/contributing.md);
+* As with new users, for new developers please consider joining our
+  Slack Channel,
+  [#tidiness_in_bioc](https://slack.bioconductor.org).
+  Most of the tidyomics developers are active there and we are happy
+  to talk through updates, PRs, or give guidance on your development
+  of a new package in this space.
+
+# Resources {-}
+
+## Workflows {-}
+
+_This section lists the different workshops introducing the `tidyomics` framework_
+
+- BioC workshop covering single cell transcriptomics and genomics: [Tidy single-cell analyses](https://tidyomics.github.io/tidyomicsWorkshopBioc2023/articles/tidyGenomicsTranscriptomics.html)
+- BioC workshop covering genomic ranges and interactions: [Investigating chromatin composition and architecture](https://jserizay.com/Bioc2024tidyworkshop/)
+- Online book covering tidy manipulation of GRanges and more: [Tidy ranges tutorial](https://tidyomics.github.io/tidy-ranges-tutorial/)
+- Quarto lecture notes introducing the concepts of tidyomics for expression and ranges: [Tidy intro talk](https://tidyomics.github.io/tidy-intro-talk)
+- Short tutorial showing overlaps of GWAS SNPs with scATAC-seq peaks [T1D GWAS SNPs and CD4+ peaks](https://htmlpreview.github.io/?https://github.com/mikelove/cd4-overlaps/blob/main/CATlas/analysis.html)
+- Workflow showing RNA-seq and ATAC-seq integration with plyranges: [Fluent genomics workflow](https://sa-lee.github.io/fluentGenomics/articles/fluentGenomics.html)
+
+## Talks {-}
+
+_This section lists the different talks presenting the `tidyomics` framework_
+
+* [Tidy enrichment analysis with plyranges and nullranges](https://github.com/tidyomics/tidy-genomics-talk/blob/main/tidy-enrichment.pdf)
+* [Tidy analysis of genomic data](https://github.com/tidyomics/tidy-genomics-talk/blob/main/tidy-genomics-talk.pdf)
+
+We try to add any talk related to `tidyomics` in 
+[our repository](https://github.com/tidyomics/tidy-genomics-talk). 
+Please open an issue if you'd like to list yours!
+
+## Related projects {-}
+
+- [biobroom](https://github.com/StoreyLab/biobroom)
+
+Please open an issue if you'd like other related projects to be listed here!
+
+# Reproducibility {-}
+
+## Docker image {-}
 
 A `Docker` image built from this repository is available here: 
 
 👉 [ghcr.io/js2264/biocbook.tidyomics](https://ghcr.io/js2264/biocbook.tidyomics) 🐳
 
 ::: {.callout-tip icon='true'}
-## Get started now 🎉
+
+### Get started now 🎉
 
 You can get access to all the packages used in this book in < 1 minute, 
 using this command in a terminal: 
@@ -48,7 +116,7 @@ docker run -it ghcr.io/js2264/biocbook.tidyomics:devel R
 
 :::
 
-# RStudio Server {-}
+## RStudio Server {-}
 
 An RStudio Server instance can be initiated from the `Docker` image as follows: 
 
@@ -63,20 +131,6 @@ docker run \
 
 The initiated RStudio Server instance will be available at 
 [https://localhost:8787](https://localhost:8787).
-
-<!-- 
-# System dependencies and conda 
-
-A pre-configured `micromamba` environment called `BiocBook` is available 
-once the Docker image is loaded. It provides all the softwares listed in 
-`requirements.yml`. 
-
-```{sh "micromamba", filename="bash"}
-#| eval: false
-docker run -it ghcr.io/js2264/biocbook.tidyomics:devel bash
-micromamba activate BiocBook
-``` 
--->
 
 # Session info {-}
 
@@ -93,3 +147,5 @@ sessioninfo::session_info(
 ```
 
 :::
+
+# References {-}
