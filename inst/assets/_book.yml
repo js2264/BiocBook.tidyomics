@@ -3,12 +3,12 @@ book:
   chapters:
     - index.qmd
     - pages/preamble.qmd
-    - part: "Fundamentals concepts"
+    - part: "Fundamental omics data"
       chapters:
         - pages/genomic-interval.qmd
         - pages/genomic-interaction.qmd
         - pages/summarized-experiment.qmd
-    - part: "Specific omics"
+    - part: "Complex omics data"
       chapters:
         - pages/transcriptomic.qmd
         - pages/epigenomics.qmd
@@ -16,11 +16,9 @@ book:
         - pages/spatial-single-cell.qmd
         - pages/flow-cytometry.qmd
         - pages/mass-cytometry.qmd
-    - part: "Additional resources"
-      chapters:
-        - pages/packages-list.qmd
-        - pages/future-directions.qmd
   appendices:
+    - pages/talks-and-workshops.qmd
+    - pages/packages-list.qmd
     - pages/tidyomics-contributors.qmd
   cover-image: assets/cover.png
   favicon: assets/favicon.png

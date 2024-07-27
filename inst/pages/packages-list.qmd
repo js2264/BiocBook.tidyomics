@@ -20,23 +20,3 @@
 | [nullranges](https://nullranges.github.io/nullranges/) | [Vignette](https://nullranges.github.io/nullranges/articles/nullranges.html) | [GitHub](https://github.com/nullranges/nullranges/) | Generation of null genomic range sets | 
 | [easylift](https://nahid18.github.io/easylift/) | [Vignette](https://nahid18.github.io/easylift/articles/easylift.html) | [GitHub](https://github.com/nahid18/easylift/) | Perform genomic liftover |
 | [tidygate](https://github.com/stemangiola/tidygate) | [Vignette](https://github.com/stemangiola/tidygate/blob/master/vignettes/introdution.Rmd) | [GitHub](https://github.com/stemangiola/tidygate) | Add gate information to your tibble |
-
-# Resources {-}
-
-# Session info {-}
-
-::: {.callout-note collapse="true"}
-
-## Click to expand 👇
-
-```{r "session info"}
-#| cache: false
-sessioninfo::session_info(
-    installed.packages()[,"Package"], 
-    include_base = TRUE
-)
-```
-
-:::
-
-# References {-}

@@ -1,0 +1,38 @@
+
+# Reproducibility
+
+## Docker image
+
+A `Docker` image built from this repository is available here: 
+
+👉 [ghcr.io/js2264/biocbook.tidyomics](https://ghcr.io/js2264/biocbook.tidyomics) 🐳
+
+::: {.callout-tip icon='true'}
+
+### Get started now 🎉
+
+You can get access to all the packages used in this book in < 1 minute, 
+using this command in a terminal: 
+
+```{sh "docker", filename="bash"}
+#| eval: false
+docker run -it ghcr.io/js2264/biocbook.tidyomics:devel R
+```
+
+:::
+
+## RStudio Server
+
+An RStudio Server instance can be initiated from the `Docker` image as follows: 
+
+```{sh "rstudio", filename="bash"}
+#| eval: false
+docker run \
+    --volume <local_folder>:<destination_folder> \
+    -e PASSWORD=OHCA \
+    -p 8787:8787 \
+    ghcr.io/js2264/biocbook.tidyomics:devel
+```
+
+The initiated RStudio Server instance will be available at 
+[https://localhost:8787](https://localhost:8787).
